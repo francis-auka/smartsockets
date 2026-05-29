@@ -1,4 +1,5 @@
 'use client';
+import SeoDescription from '@/components/SeoDescription';
 
 export default function ShippingPage() {
   return (
@@ -10,15 +11,15 @@ export default function ShippingPage() {
             Shipping <br />Synchronization.
           </h1>
           <p className="text-black/60 text-xl font-medium tracking-tight leading-relaxed max-w-2xl">
-            We operate an encrypted global transit network. Your archive is tracked in real-time until physical deployment.
+            Fast deployment of your power automation tools across the country.
           </p>
         </div>
 
         <div className="grid gap-12">
           {[
-            { title: 'Standard Deployment', desc: '3-5 business solar cycles for standard metropolitan transit. Fully tracked from the logistics hub.' },
-            { title: 'Express Sync', desc: 'Direct factory-to-center transit within 24-48 hours. Priority sequence on our shipping grid.' },
-            { title: 'Global Grid', desc: 'We deliver to over 150 regions worldwide. International customs protocols apply for inter-continental transit.' }
+            { title: 'Local Delivery', desc: 'Same-day or next-day delivery within Nairobi metropolitan area.' },
+            { title: 'Coast & Upcountry', desc: 'Reliable 48-hour delivery to other major Kenyan towns.' },
+            { title: 'Secure Packing', desc: 'Every socket is shipped in anti-static, shock-proof packaging.' }
           ].map((item, i) => (
              <div key={i} className="bg-[#f5f5f7] p-10 rounded-[2.5rem] border border-black/5 space-y-4">
                 <h3 className="text-2xl font-black tracking-tight text-black uppercase">{item.title}</h3>
@@ -27,6 +28,7 @@ export default function ShippingPage() {
           ))}
         </div>
       </div>
+      <SeoDescription />
     </div>
   );
 }

@@ -7,9 +7,26 @@ import { CartProvider } from '@/context/CartContext';
 import CartSidebar from '@/components/CartSidebar';
 
 export const metadata: Metadata = {
-  title: 'Smart Sockets - Remote Power Control',
+  metadataBase: new URL('https://smartsockets.co.ke'),
+  title: {
+    default: 'Smart Sockets Kenya | Remote Power Control & Monitoring',
+    template: '%s | Smart Sockets Kenya',
+  },
   description: 'Shop the best smart sockets and power solutions in Kenya. Remote control, energy monitoring, and home automation at the best prices on smartsockets.co.ke.',
-  keywords: 'smart sockets Kenya, remote power control Nairobi, smart home devices Kenya, energy monitoring sockets, smart plugs Kenya',
+  keywords: 'smart sockets Kenya, remote power control Nairobi, smart home devices Kenya, energy monitoring sockets, smart plugs Kenya, intelligent power adapter Kenya',
+  openGraph: {
+    type: 'website',
+    locale: 'en_KE',
+    url: 'https://smartsockets.co.ke',
+    siteName: 'Smart Sockets Kenya',
+    title: 'Smart Sockets Kenya | Remote Power Control & Monitoring',
+    description: 'The leading provider of intelligent power solutions in Kenya. Smart plugs and Wi-Fi sockets for your home.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Smart Sockets Kenya',
+    description: 'Intelligent power solutions in Kenya. Shop online at smartsockets.co.ke.',
+  },
 };
 
 export default function RootLayout({

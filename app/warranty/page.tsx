@@ -1,4 +1,5 @@
 'use client';
+import SeoDescription from '@/components/SeoDescription';
 
 export default function WarrantyPage() {
   return (
@@ -10,16 +11,15 @@ export default function WarrantyPage() {
             Warranty <br />Architecture.
           </h1>
           <p className="text-black/60 text-xl font-medium tracking-tight leading-relaxed max-w-2xl">
-            Every SmartSockets piece ships with an engineered warranty protocol. We stand behind every component, every circuit, every relay.
+            Our smart sockets are engineered for longevity and back by a 1-year manufacturing warranty.
           </p>
         </div>
 
         <div className="grid gap-12">
           {[
-            { title: '12-Month Full Coverage', desc: 'All Pro Series and Core devices are covered under our standard 12-month manufacturing defect protocol. This includes display modules, bio-sensors, and haptic feedback units.' },
-            { title: 'Extended Shield Program', desc: 'Upgrade to our 24-month Extended Shield for complete peace of mind. Covers accidental drops, water exposure beyond rating, and battery degradation beyond 20%.' },
-            { title: 'Claim Procedure', desc: 'Initiate a warranty claim through our Contact portal or directly via your order dashboard. Include your order ID and a brief diagnostic description. Our agents respond within 48 hours.' },
-            { title: 'What\'s Not Covered', desc: 'Intentional damage, unauthorized modifications, cosmetic wear from normal use, and accessories purchased from third-party vendors fall outside our warranty arc.' }
+            { title: '12-Month Coverage', desc: 'Protection against relay failure, Wi-Fi module issues, and sensor inaccuracies.' },
+            { title: 'Surge Protection', desc: 'Warranty remains valid when used with recommended voltage ranges.' },
+            { title: 'Replacement', desc: 'Direct replacement for any verified defective units within the warranty window.' }
           ].map((item, i) => (
              <div key={i} className="bg-[#f5f5f7] p-10 rounded-[2.5rem] border border-black/5 space-y-4">
                 <h3 className="text-2xl font-black tracking-tight text-black uppercase">{item.title}</h3>
@@ -28,6 +28,7 @@ export default function WarrantyPage() {
           ))}
         </div>
       </div>
+      <SeoDescription />
     </div>
   );
 }

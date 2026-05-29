@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Heart, Shield, RefreshCw, Truck, ChevronLeft } from 'lucide-react';
 import { useState, useEffect, use } from 'react';
 import { useCart } from '@/context/CartContext';
+import SeoDescription from '@/components/SeoDescription';
 
 interface Product {
   id: number;
@@ -173,7 +174,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="mb-12 md:mb-20">
                <h3 className="text-[11px] md:text-[12px] uppercase tracking-widest text-black/30 mb-8 md:mb-10 font-black">Key Features</h3>
                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-5 md:gap-x-16 md:gap-y-6">
-                  {(product.features.length ? product.features : ['Heart Rate Monitor', 'AMOLED Display', 'Waterproof', 'Sleep Tracking']).map((feature, idx) => (
+                  {(product.features.length ? product.features : ['Remote Control', 'Timer Setup', 'Energy Monitoring', 'Voice Access']).map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-4 text-[11px] md:text-[12px] font-bold text-black/40 uppercase tracking-tight">
                       <div className="w-2 h-2 bg-black/10 rounded-full flex-shrink-0"></div>
                       <span className="truncate">{feature}</span>
@@ -260,6 +261,7 @@ export default function ProductPage({ params }: ProductPageProps) {
              </div>
           </div>
         )}
+        <SeoDescription />
       </div>
     </div>
   );

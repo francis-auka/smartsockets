@@ -1,4 +1,5 @@
 'use client';
+import SeoDescription from '@/components/SeoDescription';
 
 export default function CustomerCarePage() {
   return (
@@ -10,15 +11,15 @@ export default function CustomerCarePage() {
             Customer <br />Care Protocol.
           </h1>
           <p className="text-black/60 text-xl font-medium tracking-tight leading-relaxed max-w-2xl">
-            Our commitment to your performance extends beyond the archive. Explore our care directives for optimal device synchronization.
+            Empowering your connected home. Professional support for all power management systems.
           </p>
         </div>
 
         <div className="grid gap-12">
           {[
-            { title: 'Technical Sync', desc: 'Facing synchronization issues between your Pro Series and mobile hub? Our technical agents provide 24/7 calibration logs.' },
-            { title: 'Archive Status', desc: 'Track your acquisition from the factory to your nerve center. Every movement is logged through our global transit grid.' },
-            { title: 'Device Maintenance', desc: 'Preserve the cinematic finish of your hardware. Follow our cleaning and maintenance protocols for peak longevity.' }
+            { title: 'Setup Assistance', desc: 'Help with connecting your plugs to the Smart Life or Tuya apps.' },
+            { title: 'Energy Insights', desc: 'Guides on how to interpret energy monitoring data and set schedules.' },
+            { title: 'Resolutions', desc: 'Dedicated agents available for any hardware or software inquiries.' }
           ].map((item, i) => (
              <div key={i} className="bg-[#f5f5f7] p-10 rounded-[2.5rem] border border-black/5 space-y-4">
                 <h3 className="text-2xl font-black tracking-tight text-black uppercase">{item.title}</h3>
@@ -27,6 +28,7 @@ export default function CustomerCarePage() {
           ))}
         </div>
       </div>
+      <SeoDescription />
     </div>
   );
 }

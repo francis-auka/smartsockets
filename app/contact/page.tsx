@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock } from 'lucide-react';
 import { useState } from 'react';
+import SeoDescription from '@/components/SeoDescription';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -42,7 +43,7 @@ export default function ContactPage() {
                     <Phone size={20} strokeWidth={2.5} className="text-black" />
                   </div>
                   <h3 className="text-lg font-black tracking-tight text-black uppercase">Call Us</h3>
-                  <p className="text-sm font-bold text-black/30 uppercase tracking-widest leading-none">+254 700 000 000</p>
+                  <p className="text-sm font-bold text-black/30 uppercase tracking-widest leading-none">+254 717 308 051</p>
                </div>
 
                <div className="space-y-4 text-left">
@@ -115,6 +116,7 @@ export default function ContactPage() {
              )}
           </div>
         </div>
+        <SeoDescription />
       </div>
     </div>
   );
