@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     title: 'Smart Sockets Kenya',
     description: 'Intelligent power solutions in Kenya. Shop online at smartsockets.co.ke.',
   },
+  verification: {
+    google: "jbmgHaUZ5gtrMFx7kHxYzkg3KVPnUut006N_kfRotNo"
+  }
 };
 
 export default function RootLayout({
