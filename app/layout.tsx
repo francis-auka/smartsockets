@@ -21,11 +21,24 @@ export const metadata: Metadata = {
     siteName: 'Smart Sockets Kenya',
     title: 'Smart Sockets Kenya | Remote Power Control & Monitoring',
     description: 'The leading provider of intelligent power solutions in Kenya. Smart plugs and Wi-Fi sockets for your home.',
+    images: [
+      {
+        url: '/images/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Smart Sockets Kenya Logo',
+      },
+    ],
+  },
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Smart Sockets Kenya',
     description: 'Intelligent power solutions in Kenya. Shop online at smartsockets.co.ke.',
+    images: ['/images/logo.png'],
   },
   verification: {
     google: "jbmgHaUZ5gtrMFx7kHxYzkg3KVPnUut006N_kfRotNo"
