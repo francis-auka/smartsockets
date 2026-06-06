@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image src="/images/logo.png" alt="SmartSockets Logo" width={160} height={45} className="h-9 w-auto" priority />
+            <Image src="/images/logo.png" alt="SmartSockets Logo" width={220} height={60} className="h-12 w-auto" priority />
           </Link>
 
           {/* Desktop Menu */}
