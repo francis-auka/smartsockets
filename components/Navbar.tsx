@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShoppingCart, Menu, X, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
@@ -23,8 +24,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="text-xl tracking-tighter font-black text-black">
-            SMARTSOCKETS.
+          <Link href="/" className="flex items-center">
+            <Image src="/images/logo.png" alt="SmartSockets Logo" width={160} height={45} className="h-9 w-auto" priority />
           </Link>
 
           {/* Desktop Menu */}
