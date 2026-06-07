@@ -7,7 +7,24 @@ import Link from 'next/link';
 
 export default function CartSidebar() {
   const { cart, removeFromCart, updateQuantity, cartTotal, isCartOpen, setIsCartOpen } = useCart();
+  const whatsappNumber = '254717308051';
 
+  const handleWhatsAppCheckout = () => {
+    if (cart.length === 0) return;
+
+    const orderLines = cart
+      .map(
+        (item, index) =>
+          `${index + 1}. ${item.name} x${item.quantity} - KES ${item.price * item.quantity}`
+      )
+      .join('\n');
+
+    const message = `Hello SmartSockets,%0A%0AI would like to place an order:%0A%0A${orderLines}%0A%0ATotal: KES ${cartTotal}%0A%0AThank you.`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
   if (!isCartOpen) return null;
 
   return (
@@ -128,8 +145,11 @@ export default function CartSidebar() {
               </span>
             </div>
             
-            <button className="w-full bg-black text-white text-[13px] font-black uppercase tracking-widest py-6 rounded-full hover:scale-[1.02] transition duration-500 shadow-2xl shadow-black/20">
-               Proceed to Checkout
+            <button
+              onClick={handleWhatsAppCheckout}
+              className="w-full bg-black text-white text-[13px] font-black uppercase tracking-widest py-6 rounded-full hover:scale-[1.02] transition duration-500 shadow-2xl shadow-black/20"
+            >
+              Checkout via WhatsApp
             </button>
             <p className="text-[10px] font-bold uppercase tracking-widest text-black/20 text-center">
               Secure Checkout Encrypted
